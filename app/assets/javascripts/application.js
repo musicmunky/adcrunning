@@ -14,5 +14,10 @@
 //= require turbolinks
 //= require jquery-3.3.1.min
 //= require bootstrap.min
+//= require bootstrap-datepicker
+//= require moment
+//= require fullcalendar/dist/fullcalendar
+//= require fullcalendar/dist/gcal
+// require bootstrap-datetimepicker
 //= require site
 // require_tree .

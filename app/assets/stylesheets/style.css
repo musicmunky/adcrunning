@@ -39,11 +39,43 @@ li.nav-item {
     text-transform:uppercase;
 }
 
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.footer .nav-item {
+    width: 45px;
+    padding: 0 10px;
+}
+
+.footer ul.navbar-nav {
+  margin: 0 auto;
+}
+
 .logo {
     width: 100%;
 /*     float: left; */
     background: url(../assets/500x301.png);
     height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.strava {
+    width: 100%;
+    background: url(../assets/Strava.png);
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.twitter {
+    width: 100%;
+    background: url(../assets/twitter.png);
+    height: 40px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

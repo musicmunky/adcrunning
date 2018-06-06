@@ -6,6 +6,7 @@
 <% if user_signed_in? %>
     <% cspan = 3 %>
 <% end %>
+<!--
 <table>
   <thead>
     <tr>
@@ -47,7 +48,32 @@
     <% end %>
   </tbody>
 </table>
+-->
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<div id="calendar"></div>
+
+<script type='text/javascript'>
+
+$(function() {
+  $('#calendar').fullCalendar({
+    googleCalendarApiKey: 'AIzaSyCtDH98TJT_zgH8OKaIXrAIC4Nj2Cm-Oqk',
+    eventSources: [
+	{
+          googleCalendarId: 'yakabod.com_ub0r50ku0horrhvlldk6ctrlss@group.calendar.google.com'
+	},
+        {
+          googleCalendarId: 'yakabod.com_hmvdc20c0bvm178oihvombml98@group.calendar.google.com'
+        }
+      ],
+      eventRender: function(event, element) {
+//TODO change event color based on calendar
+//console.log("hello");
+     }
+  });
+});
+
+</script>
+
+<!--<%= link_to 'New Event', new_event_path %>-->

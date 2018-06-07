@@ -41,6 +41,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'awesome_print', require:"ap"
+gem 'pdfjs_viewer-rails'
 
 #gem 'momentjs-rails', '>= 2.9.0'
 #gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'

@@ -58,18 +58,28 @@
 
 $(function() {
   $('#calendar').fullCalendar({
-    googleCalendarApiKey: 'AIzaSyCtDH98TJT_zgH8OKaIXrAIC4Nj2Cm-Oqk',
+    googleCalendarApiKey: "<%= @apikey %>",
     eventSources: [
 	{
-          googleCalendarId: 'yakabod.com_ub0r50ku0horrhvlldk6ctrlss@group.calendar.google.com'
+          googleCalendarId: 'yakabod.com_ub0r50ku0horrhvlldk6ctrlss@group.calendar.google.com',
+          backgroundColor: '#CF220E',
+          borderColor: 'black',
+          textColor: 'white'
 	},
         {
-          googleCalendarId: 'yakabod.com_hmvdc20c0bvm178oihvombml98@group.calendar.google.com'
+          googleCalendarId: 'yakabod.com_hmvdc20c0bvm178oihvombml98@group.calendar.google.com',
+          backgroundColor: '#EDED0B',
+          borderColor: 'black',
+          textColor: 'black'
         }
       ],
-      eventRender: function(event, element) {
-//TODO change event color based on calendar
-//console.log("hello");
+     eventRender: function(event, element) {
+       element.css('font-family', 'sans-serif');
+       element.css('font-size', '.69em');
+     },
+     eventClick: function(event) {
+       window.open(event.url, '_blank', 'width=900,height=600');
+       return false;
      }
   });
 });

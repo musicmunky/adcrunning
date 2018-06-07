@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    @apikey = Service.where(name: "adc_google_cal").first.apikey
   end
 
   # GET /events/1

@@ -11,26 +11,32 @@
     <tr>
       <th>First name</th>
       <th>Last name</th>
-      <th>Email</th>
+      <th>Member Type</th>
+<!--      <th>Email</th>
       <th>School</th>
       <th>Age</th>
-      <th colspan="<%= cspan %>"></th>
+      <th colspan="<%= cspan %>"></th>-->
     </tr>
   </thead>
 
   <tbody>
-    <% @members.each do |member| %>
+    <%# @members.each do |member| %>
+    <% @strava_members.each do |member| %>
       <tr>
-        <td><%= member.first_name %></td>
-        <td><%= member.last_name %></td>
-        <td><%= member.email %></td>
-        <td><%= member.school %></td>
-        <td><%= member.age %></td>
-        <td><%= link_to 'Show', member %></td>
-        <% if user_signed_in? %>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <td><%= member['firstname'] %></td>
+        <td><%= member['lastname'] %></td>
+        <td><%= member['membership'] %></td>
+<!--        <td><%#= member.first_name %></td>
+        <td><%#= member.last_name %></td>
+        <td><%#= member.email %></td>
+        <td><%#= member.school %></td>
+        <td><%#= member.age %></td>
+        <td><%#= link_to 'Show', member %></td>
+        <%# if user_signed_in? %>
+        <td><%#= link_to 'Edit', edit_member_path(member) %></td>
+        <td><%#= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%# end %>
+-->
       </tr>
     <% end %>
   </tbody>

@@ -1,4 +1,6 @@
 class MembersController < ApplicationController
+  require 'stravapi'
+
   before_action :set_member, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
 
@@ -6,6 +8,7 @@ class MembersController < ApplicationController
   # GET /members.json
   def index
     @members = Member.all
+    @strava_members = Stravapi.getMemberList()
   end
 
   # GET /members/1
